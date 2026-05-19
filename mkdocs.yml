@@ -1,0 +1,82 @@
+# mkdocs.yml — Kami Laundry Help Center
+# Works with:
+#   mkdocs==1.6.1
+#   mkdocs-material==9.6.x
+#   mkdocs-git-revision-date-localized-plugin==1.2.x
+
+site_name: 咖米漾專業洗衣支援中心 Kami Laundry Help Center
+site_author: 咖米漾專業洗衣 Kami Laundry
+site_url: https://help.kamilaundry.com/
+site_description: 咖米漾專業洗衣官方支援中心、服務條款、會員權益與資料安全說明
+
+copyright: Copyright © 2026 被神眷顧的股份有限公司 Kami Bless Corporation. All rights reserved.
+
+theme:
+  name: material
+  language: zh-TW
+
+  # Uncomment when ready
+  # logo: assets/logo.png
+  # favicon: assets/favicon.png
+
+  features:
+    - content.code.copy
+    - content.tooltips
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - toc.follow
+
+  palette:
+    - scheme: default
+      primary: light blue
+      accent: blue
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - git-revision-date-localized:
+      enable_creation_date: false
+      type: date
+      timezone: Asia/Taipei
+      locale: zh
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+      title: 目錄
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra:
+  status:
+    new: 最近新增
+    deprecated: 已停止適用
+
+nav:
+  - 首頁: index.md
+
+  - 約定條款:
+      - 服務條款: legal/tos.md
+      - 隱私權政策: legal/privacy-policy.md
+      - 洗衣服務條款: legal/service-contract.md
+      - 常客計劃條款與條件: legal/members-program.md
+      - 資料安全: legal/data-security.md
+
+  - 2026年會籍權益與活動:
+      - 會籍權益與消費回饋總覽: event/consumption_reward.md
+      - 會籍挑戰活動: event/status_challange.md
