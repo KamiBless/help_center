@@ -41,11 +41,6 @@ plugins:
       lang:
         - zh
         - en
-  - git-revision-date-localized:
-      enable_creation_date: false
-      type: date
-      timezone: Asia/Taipei
-      locale: zh
 
 markdown_extensions:
   - admonition
